@@ -1,0 +1,48 @@
+.form-header{
+  overflow: hidden;
+  display: flex;
+}
+.form-header mat-toolbar{
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.form-header button{
+  width: 40px;
+}
+.form-header button mat-icon{
+}
+
+.contenedor-form{
+  overflow: hidden;
+  justify-content: center;
+}
+.example-button {
+  margin-left: 10px;
+  margin-top: 16px;
+}
+
+.example-tooltip-red {
+  background: #b71c1c;
+}
+.example-tooltip-blue {
+  background: #005cbf;
+}
+
+.contenedor-form .controles-container mat-form-field {
+  width: 80%;
+}
+
+@media screen and (max-width: 800px) {
+  .form-header mat-toolbar span{
+    font-size: 15px;
+  }
+
+  .form-header mat-toolbar button{
+    width: 30px;
+  }
+
+  .form-header mat-toolbar button mat-icon{
+    font-size: 20px;
+  }
+}

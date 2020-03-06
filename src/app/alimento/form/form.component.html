@@ -1,0 +1,39 @@
+<div class="form-header">
+  <mat-toolbar>
+    <span class="titulo-form">{{!alimentoService.form.controls['id'].value?"Nuevo Alimento":"Modificando Alimento"}}</span>
+    <span class="fill-remaining-space"></span>
+    <button mat-icon-button
+            matTooltip="Cerrar"
+            matTooltipClass="example-tooltip-blue"
+            [matTooltipPosition]="'above'"
+            (click)="onClose()"><mat-icon>clear</mat-icon></button>
+
+  </mat-toolbar>
+</div>
+<div class="contenedor-form">
+  <form [formGroup]="alimentoService.form" >
+    <mat-grid-list cols="2">
+      <div class="controles-container">
+        <mat-form-field>
+          <label>
+            <input formControlName="nombre" matInput placeholder="Nombre*" autofocus>
+          </label>
+          <mat-error>{{!alimentoService.form.controls['nombre'].errors?.required?"Se requiere 4 letras minimo":"No puede estar vacio"}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <label>
+            <input formControlName="precio" matInput placeholder="Precio">
+          </label>
+          <mat-error>Ingrese un precio</mat-error>
+        </mat-form-field>
+      </div>
+    </mat-grid-list>
+    <div class="button-row">
+      <button class="btn btn-primary" [disabled]="!alimentoService.form.valid" role="button" *ngIf="!alimentoService.form.controls['id'].value else elseBlock">Crear</button> <!--[disabled]="!clienteForm.form.valid"-->
+      <ng-template #elseBlock>
+        <button class="btn btn-primary" [disabled]="!alimentoService.form.valid" role="button" (click)='update()' >Editar</button><!--[disabled]="!clienteForm.form.valid"-->
+      </ng-template>
+      <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+    </div>
+  </form>
+</div>
