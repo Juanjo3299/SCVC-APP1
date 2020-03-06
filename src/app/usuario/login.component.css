@@ -9,25 +9,71 @@
 }
 
 .mat-card{
-  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  background: white;
   max-width: 800px;
   text-align: center;
   width: 100%;
 }
 
 .mat-card mat-form-field{
-  margin-left: 50%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   width: 100%;
+  max-width: 350px;
 }
 
-@media screen and (max-width: 800px) {
+.mat-card form .div-input input{
+  color: white;
+  border: white;
+  border-radius: 5px;
+  background: #5B400B;
+  width: 200px;
+  height: 40px;
+}
+
+.mat-card form .div-input input:hover{
+  color:darkgray;
+}
+
+
+.mat-card img{
+  border-radius: 100%;
+  width: 60%;
+  height: 80%;
+  max-width: 250px;
+  max-height: 200px;
+}
+
+
+
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: black !important;
+}
+
+/* Font color */
+input.mat-input-element {
+  color: black;
+}
+::ng-deep.mat-form-field-outline-thick {
+  /*change color of underline*/
+  color: #4B2A01 !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: black !important;
+}
+
+
+@media screen and (max-width: 1000px) {
   .mat-card{
     margin-left: 0;
     text-align: center;
-    width: 100%;
-  }
-  .mat-card mat-form-field{
-    margin-left: 0;
     width: 100%;
   }
 }

@@ -1,0 +1,16 @@
+.search-div{
+  margin: 10px;
+}
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+table td{
+  font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  table td{
+    font-size: 15px;
+  }
+}
