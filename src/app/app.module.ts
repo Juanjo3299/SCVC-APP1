@@ -26,6 +26,7 @@ import {MatCardModule} from '@angular/material/card';
 import { LoginComponent } from './usuario/login.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDialogModule} from '@angular/material/dialog';
+// @ts-ignore
 import {NgxSpinnerModule} from 'ngx-spinner';
 
 
@@ -67,7 +68,6 @@ const routes: Routes = [
     MatCardModule,
     MatDialogModule,
     NgxSpinnerModule
-
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [AlimentoService, {provide: LOCALE_ID, useValue: 'es' }],

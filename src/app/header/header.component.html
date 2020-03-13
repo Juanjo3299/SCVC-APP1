@@ -22,7 +22,7 @@
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-      <ul *ngIf="!authService.isAuthenticated()" class="navbar-nav navbar-right inicio-sesion">
+      <ul class="navbar-nav navbar-right inicio-sesion">
         <li ><a [routerLink]="['/login']">Iniciar Sesión</a></li>
       </ul>
     </div>
